@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan Kerja Sama - Mitsubishi Body and Paint</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        .navbar {
+    background-color: #333;
+}
+.navbar-brand {
+    font-weight: bold;
+    color: #fff;
+}
+.navbar-brand:hover {
+    color: #fff;
+}
+.nav-link {
+    color: #ccc !important;
+    margin-right: 15px;
+}
+.nav-link:hover {
+    color: #fff !important;
+}
+.btn-cta {
+    background-color: #ff4d4d;          
+    color: #fff;
+    border-radius: 20px;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+.btn-cta:hover {
+    background-color: #e63946;
+}
+        /* Styling section */
+        .partnership-section {
+            padding: 60px 0;
+            background-color: #f3f5f7;
+        }
+        .partnership-section h2 {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+        .partner-card {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+        .partner-card:hover {
+            transform: translateY(-10px);
+        }
+        .partner-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+        .partner-card h5 {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .partner-card p {
+            color: #555;
+        }
+        .partner-btn {
+            color: #007bff;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+  <!-- Navbar Section -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <!-- Brand/Logo -->
+        <a class="navbar-brand" href="index.html"> Bodi&Cat</a>
+
+        <!-- Toggler for mobile view -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tentangkami">Tentang Kami</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#staf">Tim Kami</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#layanan">Layanan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#kontak">Kontak & Alamat</a>
+                </li>
+                <!-- Dropdown Menu khusus untuk Karir dan Testimoni -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Lainnya
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="carcare.html">Layanan Car Care</a></li>
+                        <li><a class="dropdown-item" href="mitra&kerjasama.html">Mitra & Kerja Sama</a></li>
+                        <li><a class="dropdown-item" href="mitra.html">Gallery Service</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Layanan Kerja Sama Section -->
+    <section id="partnership-services" class="partnership-section">
+        <div class="container">
+            <h2>Layanan Kerja Sama</h2>
+            <div class="row">
+                <!-- Partnership Item 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="partner-card">
+                        <img src="https://via.placeholder.com/300x200" alt="Kerja Sama Asuransi">
+                        <div class="p-3">
+                            <h5>Kerja Sama Asuransi</h5>
+                            <p>Kemitraan dengan perusahaan asuransi untuk perlindungan menyeluruh kendaraan Anda.</p>
+                            <button class="btn partner-btn" onclick="showPartnerDetail('Kerja Sama Asuransi')">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Partnership Item 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="partner-card">
+                        <img src="https://via.placeholder.com/300x200" alt="Kemitraan Logistik">
+                        <div class="p-3">
+                            <h5>Kemitraan Logistik</h5>
+                            <p>Layanan logistik terpadu untuk mengoptimalkan distribusi kendaraan dan suku cadang.</p>
+                            <button class="btn partner-btn" onclick="showPartnerDetail('Kemitraan Logistik')">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Partnership Item 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="partner-card">
+                        <img src="https://via.placeholder.com/300x200" alt="Kerja Sama Pemasaran">
+                        <div class="p-3">
+                            <h5>Kerja Sama Pemasaran</h5>
+                            <p>Kerja sama pemasaran untuk memperluas jangkauan dan memperkuat merek.</p>
+                            <button class="btn partner-btn" onclick="showPartnerDetail('Kerja Sama Pemasaran')">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Partnership Details -->
+    <div class="modal fade" id="partnerDetailModal" tabindex="-1" aria-labelledby="partnerDetailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="partnerDetailModalLabel">Detail Layanan Kerja Sama</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="partnerDetailContent">
+                    <!-- Detail layanan kerja sama akan dimuat di sini secara dinamis -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to dynamically display partnership details
+        function showPartnerDetail(serviceName) {
+            const partnerDetails = {
+                'Kerja Sama Asuransi': 'Kami menawarkan kemitraan dengan berbagai perusahaan asuransi terkemuka untuk memberikan perlindungan terbaik bagi pelanggan kami. Ini mencakup paket-paket fleksibel sesuai kebutuhan dan proses klaim yang cepat.',
+                'Kemitraan Logistik': 'Layanan logistik lengkap untuk memastikan distribusi kendaraan dan komponen lainnya dilakukan dengan cepat dan aman. Kami bekerja dengan mitra logistik berpengalaman untuk solusi terbaik.',
+                'Kerja Sama Pemasaran': 'Dalam kerja sama pemasaran, kami mendukung berbagai kampanye untuk memperluas jangkauan pasar dengan cara yang efektif. Kami menawarkan berbagai bentuk kolaborasi, termasuk digital marketing dan event sponsorship.'
+            };
+
+            document.getElementById('partnerDetailModalLabel').innerText = serviceName;
+            document.getElementById('partnerDetailContent').innerText = partnerDetails[serviceName] || 'Detail layanan tidak tersedia.';
+            
+            const partnerDetailModal = new bootstrap.Modal(document.getElementById('partnerDetailModal'));
+            partnerDetailModal.show();
+        }
+    </script>
+
+</body>
+</html>
